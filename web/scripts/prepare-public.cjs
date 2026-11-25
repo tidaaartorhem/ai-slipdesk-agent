@@ -3,10 +3,10 @@
  *
  * 1. Runs the Python pipeline: ../scripts/build_web.py (preferring the
  *    repo venv at ../.venv/bin/python, falling back to python3).
- *    Rebuilds web/public/data/*.json from the real Olist Q4 2017 break
+ *    Rebuilds web/public/data/*.json from the real Olist Q3 2017 seller
  *    queue, proving the shipped payloads are pipeline-generated.
  * 2. Writes web/public/data/stamp.json with repo, git sha, UTC build time.
- * 3. Exits non-zero if the pipeline produced no orders.
+ * 3. Exits non-zero if the pipeline produced no sellers.
  */
 const { execFileSync } = require("node:child_process");
 const fs = require("node:fs");
@@ -44,21 +44,21 @@ try {
   fail(`pipeline script failed (${e && e.message ? e.message : e})`);
 }
 
-const orders = path.join(PUBLIC_DATA, "orders.json");
+const orders = path.join(PUBLIC_DATA, "sellers.json");
 if (!fs.existsSync(orders)) {
-  fail("orders.json missing after pipeline run");
+  fail("sellers.json missing after pipeline run");
 }
 const rows = JSON.parse(fs.readFileSync(orders, "utf8"));
 if (!Array.isArray(rows) || rows.length === 0) {
-  fail("orders.json is empty");
+  fail("sellers.json is empty");
 }
-console.log(`prepare-public: ${rows.length} orders shipped`);
+console.log(`prepare-public: ${rows.length} sellers shipped`);
 
 const stamp = {
-  repo: "tidaaartorhem/ai-reconciliation-agent",
+  repo: "tidaaartorhem/ai-slipdesk-agent",
   git_sha: gitSha(),
   built_utc: new Date().toISOString().replace(/\.\d+Z$/, "Z"),
-  pipeline: "recondesk LangGraph intake->reconcile->score->route->draft->gate (zero LLM calls)",
+  pipeline: "slipdesk LangGraph intake->measure->score->segment->draft->gate (zero LLM calls)",
 };
 fs.writeFileSync(path.join(PUBLIC_DATA, "stamp.json"), JSON.stringify(stamp, null, 1));
 console.log(`prepare-public: stamp ${stamp.git_sha}`);
