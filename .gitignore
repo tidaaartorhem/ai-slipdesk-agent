@@ -7,3 +7,5 @@ web/dist/
 web/public/data/
 *.tsbuildinfo
 .DS_Store
+web/vite.config.js
+web/vite.config.d.ts
