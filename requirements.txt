@@ -1,0 +1,7 @@
+# SlipDesk: deterministic LangGraph pipeline that scores supplier lead-time
+# slip per seller. The pipeline uses langgraph when installed and falls back
+# to the same nodes run sequentially. Run tests with PYTHONNOUSERSITE=0 so
+# the user-site install is visible (the VM sets PYTHONNOUSERSITE=1).
+pytest>=8.0
+langgraph>=0.2
+pandas>=2.0
