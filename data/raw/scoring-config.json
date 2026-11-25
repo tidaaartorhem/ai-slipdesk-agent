@@ -1,0 +1,22 @@
+{
+ "window": {
+  "start": "2017-07-01",
+  "end": "2017-10-01"
+ },
+ "snapshot_date": "2017-10-31",
+ "min_orders": 5,
+ "weights": {
+  "late_rate": 0.45,
+  "severity_cap_days": 15,
+  "breach": 0.2,
+  "trend_cap": 10,
+  "worst_cap": 10
+ },
+ "segments": {
+  "escalate": 45,
+  "at_risk": 30,
+  "watch": 12
+ },
+ "lead_reset_gap_days": 5,
+ "trend_min_orders": 2
+}

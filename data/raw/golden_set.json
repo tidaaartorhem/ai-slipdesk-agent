@@ -1,0 +1,213 @@
+{
+ "entries": [
+  {
+   "seller_id": "633ecdf879b94b5337cca303328e4a25",
+   "kind": "real",
+   "stats": {
+    "n": 6,
+    "late_orders": 4,
+    "late_rate": 0.6667,
+    "late_median_slip": 14.5,
+    "max_slip": 19,
+    "breach_rate": 0.8333,
+    "sep_late_rate": 0.6667,
+    "sep_n": 6,
+    "ja_late_rate": 0.0,
+    "ja_n": 0
+   },
+   "expected_route": "ESCALATE",
+   "expected_score": 67.2,
+   "note": "6 orders, 66.7% late, median late 14d, breach 83.3%, max slip 19d"
+  },
+  {
+   "seller_id": "75d34ebb1bd0bd7dde40dd507b8169c3",
+   "kind": "real",
+   "stats": {
+    "n": 11,
+    "late_orders": 3,
+    "late_rate": 0.2727,
+    "late_median_slip": 3.0,
+    "max_slip": 25,
+    "breach_rate": 0.25,
+    "sep_late_rate": 1.0,
+    "sep_n": 1,
+    "ja_late_rate": 0.2,
+    "ja_n": 10
+   },
+   "expected_route": "WATCH",
+   "expected_score": 29.3,
+   "note": "11 orders, 27.3% late, median late 3d, breach 25.0%, max slip 25d"
+  },
+  {
+   "seller_id": "5011f0d93373a4c5753adf58ca77af8d",
+   "kind": "real",
+   "stats": {
+    "n": 6,
+    "late_orders": 1,
+    "late_rate": 0.1667,
+    "late_median_slip": 28.0,
+    "max_slip": 28,
+    "breach_rate": 0.0,
+    "sep_late_rate": 1.0,
+    "sep_n": 1,
+    "ja_late_rate": 0.0,
+    "ja_n": 5
+   },
+   "expected_route": "AT_RISK",
+   "expected_score": 32.5,
+   "note": "6 orders, 16.7% late, median late 28d, breach 0.0%, max slip 28d"
+  },
+  {
+   "seller_id": "835f0f7810c76831d6c7d24c7a646d4d",
+   "kind": "real",
+   "stats": {
+    "n": 18,
+    "late_orders": 4,
+    "late_rate": 0.2222,
+    "late_median_slip": 2.0,
+    "max_slip": 11,
+    "breach_rate": 0.8095,
+    "sep_late_rate": 0.2857,
+    "sep_n": 7,
+    "ja_late_rate": 0.1818,
+    "ja_n": 11
+   },
+   "expected_route": "AT_RISK",
+   "expected_score": 40.2,
+   "note": "18 orders, 22.2% late, median late 2d, breach 81.0%, max slip 11d"
+  },
+  {
+   "seller_id": "53e4c6e0f4312d4d2107a8c9cddf45cd",
+   "kind": "real",
+   "stats": {
+    "n": 76,
+    "late_orders": 2,
+    "late_rate": 0.0263,
+    "late_median_slip": 57.5,
+    "max_slip": 109,
+    "breach_rate": 0.0957,
+    "sep_late_rate": 0.0278,
+    "sep_n": 36,
+    "ja_late_rate": 0.025,
+    "ja_n": 40
+   },
+   "expected_route": "WATCH",
+   "expected_score": 28.4,
+   "note": "76 orders, 2.6% late, median late 58d, breach 9.6%, max slip 109d"
+  },
+  {
+   "seller_id": "1f50f920176fa81dab994f9023523100",
+   "kind": "real",
+   "stats": {
+    "n": 261,
+    "late_orders": 8,
+    "late_rate": 0.0307,
+    "late_median_slip": 3.5,
+    "max_slip": 65,
+    "breach_rate": 0.0319,
+    "sep_late_rate": 0.0532,
+    "sep_n": 94,
+    "ja_late_rate": 0.018,
+    "ja_n": 167
+   },
+   "expected_route": "WATCH",
+   "expected_score": 19.0,
+   "note": "261 orders, 3.1% late, median late 4d, breach 3.2%, max slip 65d"
+  },
+  {
+   "seller_id": "edge-all-on-time",
+   "kind": "synthetic",
+   "stats": {
+    "n": 10,
+    "late_orders": 0,
+    "late_rate": 0.0,
+    "late_median_slip": 0.0,
+    "max_slip": -5.0,
+    "breach_rate": 0.0,
+    "sep_late_rate": 0.0,
+    "sep_n": 5,
+    "ja_late_rate": 0.0,
+    "ja_n": 5
+   },
+   "expected_route": "RELIABLE",
+   "expected_score": 0.0,
+   "note": "10 orders, none late, none breached: 0 + 0 + 0 + 0 + 0 = 0"
+  },
+  {
+   "seller_id": "edge-single-late",
+   "kind": "synthetic",
+   "stats": {
+    "n": 10,
+    "late_orders": 1,
+    "late_rate": 0.1,
+    "late_median_slip": 3.0,
+    "max_slip": 3.0,
+    "breach_rate": 0.0,
+    "sep_late_rate": 0.0,
+    "sep_n": 2,
+    "ja_late_rate": 0.125,
+    "ja_n": 8
+   },
+   "expected_route": "RELIABLE",
+   "expected_score": 7.5,
+   "note": "4.5 late + 3 severity + 0 breach + 0 trend (Sep better) + 0 worst = 7.5"
+  },
+  {
+   "seller_id": "edge-half-late",
+   "kind": "synthetic",
+   "stats": {
+    "n": 10,
+    "late_orders": 5,
+    "late_rate": 0.5,
+    "late_median_slip": 10.0,
+    "max_slip": 12.0,
+    "breach_rate": 0.2,
+    "sep_late_rate": 0.6,
+    "sep_n": 5,
+    "ja_late_rate": 0.4,
+    "ja_n": 5
+   },
+   "expected_route": "ESCALATE",
+   "expected_score": 49.0,
+   "note": "22.5 + 10 + 4 + 10 trend + 2.5 worst = 49.0"
+  },
+  {
+   "seller_id": "edge-unscored",
+   "kind": "synthetic",
+   "stats": {
+    "n": 3,
+    "late_orders": 2,
+    "late_rate": 0.667,
+    "late_median_slip": 9.0,
+    "max_slip": 12.0,
+    "breach_rate": 0.5,
+    "sep_late_rate": 1.0,
+    "sep_n": 2,
+    "ja_late_rate": 0.0,
+    "ja_n": 1
+   },
+   "expected_route": "UNSCORED",
+   "expected_score": 51.5,
+   "note": "Score still computes (30 late + 9 severity + 10 breach + 0 trend \u2014 only 1 Jul-Aug order \u2014 + 2.5 worst = 51.5) but the route is UNSCORED under 5 orders."
+  },
+  {
+   "seller_id": "edge-trend-guard",
+   "kind": "synthetic",
+   "stats": {
+    "n": 6,
+    "late_orders": 2,
+    "late_rate": 0.333,
+    "late_median_slip": 5.0,
+    "max_slip": 8.0,
+    "breach_rate": 0.0,
+    "sep_late_rate": 1.0,
+    "sep_n": 1,
+    "ja_late_rate": 0.0,
+    "ja_n": 5
+   },
+   "expected_route": "WATCH",
+   "expected_score": 20.5,
+   "note": "15 + 5 + 0 + 0 trend (only 1 Sep order) + 0.5 worst = 20.5"
+  }
+ ]
+}

@@ -1,0 +1,316 @@
+{
+ "vectors": [
+  {
+   "input": {
+    "n": 6,
+    "late_orders": 4,
+    "late_rate": 0.667,
+    "late_median_slip": 14.5,
+    "max_slip": 19.0,
+    "breach_rate": 0.833,
+    "sep_late_rate": 0.667,
+    "sep_n": 3,
+    "ja_late_rate": 0.0,
+    "ja_n": 3
+   },
+   "expected": {
+    "score": 77.2,
+    "parts": {
+     "late_rate": 30.0,
+     "severity": 14.5,
+     "breach": 16.7,
+     "trend": 10.0,
+     "worst": 6.0
+    },
+    "route": "ESCALATE",
+    "action": "FIX SHIP-BY DISCIPLINE"
+   }
+  },
+  {
+   "input": {
+    "n": 11,
+    "late_orders": 4,
+    "late_rate": 0.333,
+    "late_median_slip": 14.0,
+    "max_slip": 25.0,
+    "breach_rate": 0.25,
+    "sep_late_rate": 1.0,
+    "sep_n": 4,
+    "ja_late_rate": 0.2,
+    "ja_n": 7
+   },
+   "expected": {
+    "score": 53.0,
+    "parts": {
+     "late_rate": 15.0,
+     "severity": 14.0,
+     "breach": 5.0,
+     "trend": 10.0,
+     "worst": 9.0
+    },
+    "route": "ESCALATE",
+    "action": "FIX SHIP-BY DISCIPLINE"
+   }
+  },
+  {
+   "input": {
+    "n": 18,
+    "late_orders": 5,
+    "late_rate": 0.286,
+    "late_median_slip": 7.0,
+    "max_slip": 11.0,
+    "breach_rate": 0.714,
+    "sep_late_rate": 0.444,
+    "sep_n": 9,
+    "ja_late_rate": 0.167,
+    "ja_n": 9
+   },
+   "expected": {
+    "score": 46.2,
+    "parts": {
+     "late_rate": 12.9,
+     "severity": 7.0,
+     "breach": 14.3,
+     "trend": 10.0,
+     "worst": 2.0
+    },
+    "route": "ESCALATE",
+    "action": "FIX SHIP-BY DISCIPLINE"
+   }
+  },
+  {
+   "input": {
+    "n": 76,
+    "late_orders": 2,
+    "late_rate": 0.021,
+    "late_median_slip": 57.5,
+    "max_slip": 109.0,
+    "breach_rate": 0.053,
+    "sep_late_rate": 0.0,
+    "sep_n": 20,
+    "ja_late_rate": 0.03,
+    "ja_n": 56
+   },
+   "expected": {
+    "score": 27.0,
+    "parts": {
+     "late_rate": 0.9,
+     "severity": 15.0,
+     "breach": 1.1,
+     "trend": 0.0,
+     "worst": 10.0
+    },
+    "route": "WATCH",
+    "action": "REVIEW THE CATASTROPHIC SLIP"
+   }
+  },
+  {
+   "input": {
+    "n": 261,
+    "late_orders": 7,
+    "late_rate": 0.026,
+    "late_median_slip": 4.0,
+    "max_slip": 65.0,
+    "breach_rate": 0.014,
+    "sep_late_rate": 0.02,
+    "sep_n": 80,
+    "ja_late_rate": 0.03,
+    "ja_n": 181
+   },
+   "expected": {
+    "score": 15.5,
+    "parts": {
+     "late_rate": 1.2,
+     "severity": 4.0,
+     "breach": 0.3,
+     "trend": 0.0,
+     "worst": 10.0
+    },
+    "route": "WATCH",
+    "action": "REVIEW THE CATASTROPHIC SLIP"
+   }
+  },
+  {
+   "input": {
+    "n": 10,
+    "late_orders": 0,
+    "late_rate": 0.0,
+    "late_median_slip": 0.0,
+    "max_slip": -5.0,
+    "breach_rate": 0.0,
+    "sep_late_rate": 0.0,
+    "sep_n": 5,
+    "ja_late_rate": 0.0,
+    "ja_n": 5
+   },
+   "expected": {
+    "score": 0.0,
+    "parts": {
+     "late_rate": 0.0,
+     "severity": 0.0,
+     "breach": 0.0,
+     "trend": 0.0,
+     "worst": 0.0
+    },
+    "route": "RELIABLE",
+    "action": "NO ACTION"
+   }
+  },
+  {
+   "input": {
+    "n": 10,
+    "late_orders": 5,
+    "late_rate": 0.5,
+    "late_median_slip": 10.0,
+    "max_slip": 12.0,
+    "breach_rate": 0.2,
+    "sep_late_rate": 0.6,
+    "sep_n": 5,
+    "ja_late_rate": 0.4,
+    "ja_n": 5
+   },
+   "expected": {
+    "score": 49.0,
+    "parts": {
+     "late_rate": 22.5,
+     "severity": 10.0,
+     "breach": 4.0,
+     "trend": 10.0,
+     "worst": 2.5
+    },
+    "route": "ESCALATE",
+    "action": "CHASE AND COACH"
+   }
+  },
+  {
+   "input": {
+    "n": 3,
+    "late_orders": 2,
+    "late_rate": 0.667,
+    "late_median_slip": 9.0,
+    "max_slip": 12.0,
+    "breach_rate": 0.5,
+    "sep_late_rate": 1.0,
+    "sep_n": 2,
+    "ja_late_rate": 0.0,
+    "ja_n": 1
+   },
+   "expected": {
+    "score": 51.5,
+    "parts": {
+     "late_rate": 30.0,
+     "severity": 9.0,
+     "breach": 10.0,
+     "trend": 0.0,
+     "worst": 2.5
+    },
+    "route": "UNSCORED",
+    "action": "NO ACTION"
+   }
+  },
+  {
+   "input": {
+    "n": 14,
+    "late_orders": 1,
+    "late_rate": 0.071,
+    "late_median_slip": 60.0,
+    "max_slip": 60.0,
+    "breach_rate": 0.071,
+    "sep_late_rate": 0.25,
+    "sep_n": 4,
+    "ja_late_rate": 0.0,
+    "ja_n": 10
+   },
+   "expected": {
+    "score": 39.6,
+    "parts": {
+     "late_rate": 3.2,
+     "severity": 15.0,
+     "breach": 1.4,
+     "trend": 10.0,
+     "worst": 10.0
+    },
+    "route": "AT_RISK",
+    "action": "CHECK SEPTEMBER CAPACITY"
+   }
+  },
+  {
+   "input": {
+    "n": 32,
+    "late_orders": 4,
+    "late_rate": 0.132,
+    "late_median_slip": 12.0,
+    "max_slip": 23.0,
+    "breach_rate": 0.0,
+    "sep_late_rate": 0.286,
+    "sep_n": 7,
+    "ja_late_rate": 0.097,
+    "ja_n": 25
+   },
+   "expected": {
+    "score": 35.9,
+    "parts": {
+     "late_rate": 5.9,
+     "severity": 12.0,
+     "breach": 0.0,
+     "trend": 10.0,
+     "worst": 8.0
+    },
+    "route": "AT_RISK",
+    "action": "CHECK SEPTEMBER CAPACITY"
+   }
+  },
+  {
+   "input": {
+    "n": 5,
+    "late_orders": 1,
+    "late_rate": 0.2,
+    "late_median_slip": 8.0,
+    "max_slip": 8.0,
+    "breach_rate": 0.4,
+    "sep_late_rate": 0.5,
+    "sep_n": 2,
+    "ja_late_rate": 0.0,
+    "ja_n": 3
+   },
+   "expected": {
+    "score": 35.5,
+    "parts": {
+     "late_rate": 9.0,
+     "severity": 8.0,
+     "breach": 8.0,
+     "trend": 10.0,
+     "worst": 0.5
+    },
+    "route": "AT_RISK",
+    "action": "FIX SHIP-BY DISCIPLINE"
+   }
+  },
+  {
+   "input": {
+    "n": 20,
+    "late_orders": 0,
+    "late_rate": 0.0,
+    "late_median_slip": 0.0,
+    "max_slip": 2.0,
+    "breach_rate": 0.1,
+    "sep_late_rate": 0.0,
+    "sep_n": 6,
+    "ja_late_rate": 0.0,
+    "ja_n": 14
+   },
+   "expected": {
+    "score": 2.0,
+    "parts": {
+     "late_rate": 0.0,
+     "severity": 0.0,
+     "breach": 2.0,
+     "trend": 0.0,
+     "worst": 0.0
+    },
+    "route": "RELIABLE",
+    "action": "NO ACTION"
+   }
+  }
+ ]
+}
